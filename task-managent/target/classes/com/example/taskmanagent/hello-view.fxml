@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taskmanagent.HelloController">
+    <center>
+        <ListView fx:id="taskListView" prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER" />
+    </center>
+    <left>
+        <VBox alignment="TOP_CENTER" prefWidth="100.0" spacing="10.0">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <RadioButton fx:id="homeworkRadioButton" mnemonicParsing="false" text="Homework" />
+            <RadioButton fx:id="meetingRadioButton" mnemonicParsing="false" text="Meeting" />
+            <RadioButton fx:id="shoppingRadioButton" mnemonicParsing="false" text="Shopping" />
+        </VBox>
+    </left>
+    <right>
+        <GridPane hgap="10.0" prefWidth="200.0" vgap="10.0">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <Label text="Name:" />
+            <TextField fx:id="nameTextField" GridPane.columnIndex="1" />
+            <Label text="Description:" GridPane.rowIndex="1" />
+            <TextField fx:id="descriptionTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Priority:" GridPane.rowIndex="2" />
+            <ComboBox fx:id="priorityComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button text="Add Task" onAction="#addTask" GridPane.rowIndex="3" />
+            <Button text="Mark Complete" onAction="#markTaskComplete" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button text="Remove Task" onAction="#removeTask" GridPane.rowIndex="4" />
+        </GridPane>
+    </right>
+</BorderPane>
+
+
